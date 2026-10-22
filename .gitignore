@@ -1,0 +1,20 @@
+# Build
+target/
+build/
+*.class
+# IDE
+.idea/
+*.iml
+.vscode/
+# OS / WSL
+.DS_Store
+*:Zone.Identifier
+# Env
+.env
+# Frontend
+node_modules/
+dist/
+
+# Vite local env + MSW generated worker
+*.local
+frontend/public/mockServiceWorker.js

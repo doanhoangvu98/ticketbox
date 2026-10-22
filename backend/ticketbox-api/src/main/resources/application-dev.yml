@@ -1,0 +1,17 @@
+# Local development profile: run with SPRING_PROFILES_ACTIVE=dev
+spring:
+  flyway:
+    # Demo data (thousands of events/seats) is loaded only in dev, never in production.
+    locations: classpath:db/migration,classpath:db/seed
+    # Benchmark trick (docs/BENCHMARK.md): set target to 1.1 to stop BEFORE the index migration.
+    # target: "1.1"
+  jpa:
+    properties:
+      hibernate:
+        generate_statistics: true   # prints query count per session -> proves the N+1 fix
+
+logging:
+  level:
+    org.hibernate.SQL: debug                      # every SQL statement
+    org.hibernate.stat: debug                     # statistics summary
+    com.noah.ticketbox: debug

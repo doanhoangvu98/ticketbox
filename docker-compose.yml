@@ -1,0 +1,22 @@
+# Local infrastructure. Week 2: PostgreSQL only.
+# Host port 5433 avoids conflicts with a locally installed PostgreSQL on 5432.
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: ticketbox-postgres
+    environment:
+      POSTGRES_DB: ticketbox
+      POSTGRES_USER: ticketbox
+      POSTGRES_PASSWORD: ticketbox
+    ports:
+      - "5433:5432"
+    volumes:
+      - ticketbox-pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ticketbox -d ticketbox"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  ticketbox-pgdata:
