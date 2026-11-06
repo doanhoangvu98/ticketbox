@@ -1,6 +1,10 @@
 # Bước 1B — Đa luồng (Multi-threading)
 
-Project: `learning/week1-java-core` · Khóa học: *Multi-Threading Overview & Thread Creation · Thread Lifecycle &
+> **Lưu ý:** thư mục `learning/week1-java-core` (project mẫu của bài này) đã bị xoá khỏi repo. Code `EventLocks`, `Order*`,
+> `ConcurrencyTest` vẫn xem được ở commit `6a79b64`: `git show 6a79b64:learning/week1-java-core/<đường dẫn>`.
+> Bản hiện hành tương đương nằm ở `backend/ticketbox-core` (`Booking*`, `BookingConcurrencyTest`).
+
+Project (đã xoá, xem lưu ý trên): `learning/week1-java-core` · Khóa học: *Multi-Threading Overview & Thread Creation · Thread Lifecycle &
 Methods · Synchronization, Volatile & Deadlock · Virtual Thread* · 3–4 giờ
 
 | | |
