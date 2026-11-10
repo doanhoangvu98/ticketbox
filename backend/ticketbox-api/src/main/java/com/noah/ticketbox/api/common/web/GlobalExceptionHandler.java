@@ -83,9 +83,8 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 
     private static HttpStatus statusOf(ErrorCode code) {
         return switch (code) {
-            case EVENT_NOT_FOUND, VENUE_NOT_FOUND, SEAT_NOT_FOUND, BOOKING_NOT_FOUND -> HttpStatus.NOT_FOUND;
-            case SEAT_NOT_AVAILABLE, INVALID_STATE -> HttpStatus.CONFLICT;
-            case BOOKING_EXPIRED -> HttpStatus.GONE;
+            case EVENT_NOT_FOUND, VENUE_NOT_FOUND -> HttpStatus.NOT_FOUND;
+            case INVALID_STATE -> HttpStatus.CONFLICT;
             case INVALID_ARGUMENT -> HttpStatus.BAD_REQUEST;
         };
     }

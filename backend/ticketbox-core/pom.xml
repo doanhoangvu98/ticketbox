@@ -26,18 +26,4 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-    <build>
-        <plugins>
-            <!-- Run the Week 1 console demo: mvn -pl ticketbox-core exec:java -->
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>3.5.1</version>
-                <configuration>
-                    <mainClass>com.noah.ticketbox.core.demo.Week1DemoApp</mainClass>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 </project>
